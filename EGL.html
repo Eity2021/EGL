@@ -1,263 +1,1509 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Everything Green</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Bootstrap CSS from CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <!-- Custom CSS -->
-    <style>
-      body {
-        background-color: #edf7f4;
-        font-family: "Inter", sans-serif;
-      }
 
-      .login-btn {
-        border: 2px solid #a2d9ce;
-        color: #000000;
-        background-color: transparent;
-        font-weight: 600;
-        padding: 8px 35px;
-        border-radius: 50px;
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everything Green</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Bootstrap CSS from CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- Custom CSS -->
+  <style>
+    body {
+      /* background-color: #edf7f4; */
+      /* font-family: "Inter", sans-serif; */
+    }
 
-      .login-btn:hover {
-        background-color: #008060;
-        color: #fff;
-      }
+    .login-btn {
+      border: 2px solid #a2d9ce;
+      color: #000000;
+      background-color: transparent;
+      font-weight: 600;
+      padding: 8px 35px;
+      border-radius: 50px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-      .nav-link-custom {
-        font-size: 1.1rem;
-      }
+    .login-btn:hover {
+      background-color: #008060;
+      color: #fff;
+    }
 
+    .nav-link-custom {
+      font-size: 1.1rem;
+    }
+
+    .main-heading {
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 55px;
+      line-height: 63px;
+    }
+
+    .main-text {
+      font-family: "Manrope", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: #4a4a4a;
+    }
+
+    .btn-primary-custom {
+      background-color: #008060;
+      border-color: #008060;
+      color: #fff;
+      padding: 10px 45px;
+      border-radius: 28px;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .btn-primary-custom:hover {
+      background-color: #00664c;
+      border-color: #00664c;
+    }
+
+    .btn-secondary-custom {
+      background-color: transparent;
+      border: 2px solid #000;
+      color: #000;
+      padding: 10px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    .btn-secondary-custom:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+
+
+    .step-card {
+      background-color: white;
+      width: 110px;
+      border-radius: 10px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 16px;
+      padding-right: 16px;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.03);
+    }
+
+    .position1 {
+      position: absolute;
+      bottom: -77px;
+      left: -85px;
+    }
+
+    .position2 {
+      position: absolute;
+      bottom: -77px;
+      left: 440px;
+    }
+
+    .position3 {
+      position: absolute;
+      bottom: -77px;
+      right: -90px;
+    }
+
+    .feature-card {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01); */
+      margin-bottom: 20px;
+    }
+
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px
+    }
+
+    .overall-heading {
+      font-family: "inter";
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+
+    }
+
+    .main-text {
+      font-family: "inter";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media (max-width: 992px) {
       .main-heading {
-        font-family: "Manrope", sans-serif;
-        font-weight: 700;
-        font-size: 55px;
-        line-height: 63px;
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
+
+    .features-section {
+      padding: 80px 0;
+      background: linear-gradient(to right, #f3fbf9, #f7fbf9);
+    }
+
+    .features-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 60px;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .feature-card {
+      text-align: left;
+      padding: 30px 25px;
+      margin-bottom: 40px;
+      background-color: white;
+      border-radius: 10px;
+      height: 264px;
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 25px;
+      color: #38a587;
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #6c757d;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      /* Added subtle gradient background from light to slightly darker gray */
+      background: linear-gradient(to bottom, #dcf6ef, #fbfbf9);
+      padding: 120px 0;
+    }
+
+    .cta-section h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .cta-section p {
+      font-size: 1.2rem;
+      color: #6c757d;
+      margin-bottom: 30px;
+      font-weight: 400;
+    }
+
+    .cta-btn {
+      background-color: #1c9876;
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #1c9876;
+      color: white;
+      text-decoration: none;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 80px 0;
+      background-color: white;
+    }
+
+    .faq-heading {
+      margin-bottom: 50px;
+    }
+
+    .faq-section h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #2c3e50;
+
+      text-align: center;
+    }
+
+    /* Updated styles for Bootstrap accordion */
+    .accordion-item {
+      border: none;
+      border-bottom: 1px solid #e9ecef;
+      background: transparent;
+      margin-bottom: 0;
+      padding: 6px 0;
+    }
+
+    .accordion-item:last-child {
+      border-bottom: 0px solid #e9ecef;
+    }
+
+    .accordion-button {
+      background: transparent;
+      border: none;
+      padding: 30px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2c3e50;
+      box-shadow: none;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background: transparent;
+      color: #2c3e50;
+      box-shadow: none;
+    }
+
+    .accordion-button:focus {
+      box-shadow: none;
+      border: none;
+    }
+
+    .accordion-button::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+      transition: all 0.5s;
+      width: 16px;
+      height: 16px;
+      margin-left: auto;
+      position: absolute;
+      right: 0;
+      background-size: 26px 26px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+    }
+
+    .faq-number {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #6c757d;
+      margin-right: 25px;
+      min-width: 35px;
+      flex-shrink: 0;
+    }
+
+    .accordion-body {
+      padding: 0 0 25px 60px;
+      color: #6c757d;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-top: -10px;
+    }
+
+    /* Testimonial Section */
+    /* Testimonial Section */
+    .testimonial-section {
+      padding-top: 80px 0;
+      background-color: white;
+    }
+
+    .testimonial-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .testimonial-card {
+      padding: 30px;
+      margin: 0 15px;
+
+      position: relative;
+      height: auto;
+      min-height: 280px;
+    }
+
+    .testimonial-content {
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-stars svg {
+      width: 18px;
+      height: 18px;
+      color: #17a2b8;
+    }
+
+    .testimonial-text {
+      font-size: 0.95rem;
+      color: #6c757d;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      position: relative;
+      padding-right: 40px;
+    }
+
+    /* Made quote marks much bolder and more prominent */
+    .testimonial-quote {
+      position: absolute;
+      right: 0;
+      top: 100px;
+
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding-top: 15px;
+    }
+
+    .testimonial-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #17a2b8;
+      flex-shrink: 0;
+    }
+
+    .testimonial-info h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin: 0 0 4px 0;
+    }
+
+    .testimonial-info p {
+      font-size: 0.85rem;
+      color: #6c757d;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .carousel-indicators {
+      bottom: -50px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      width: 26px;
+      height: 6px;
+      background-color: #0BBE6461;
+      border: none;
+      margin: 0 4px;
+    }
+
+    .carousel-indicators .active {
+      background-color: #1C9876;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      display: none;
+    }
+
+    /* Footer Section */
+    .footer-section {
+      background: linear-gradient(to top, #f5fdfc, #fafefe);
+      padding: 60px 0 40px 0;
+      margin-top: 80px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .footer-logo-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #28a745;
+      margin-left: 8px;
+    }
+
+    .footer-tagline {
+      font-size: 0.75rem;
+      color: #28a745;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+    }
+
+    .footer-description {
+      color: #6c757d;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      max-width: 400px;
+    }
+
+    .footer-column h5 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-column ul li a {
+      color: #6c757d;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column ul li a:hover {
+      color: #28a745;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #dee2e6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .footer-copyright {
+      color: #6c757d;
+      font-size: 0.9rem;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-social a {
+      color: #6c757d;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      color: #28a745;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .cta-section {
+        padding: 60px 0;
       }
 
-      .main-text {
-        font-family: "Manrope", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        color: #4a4a4a;
+      .cta-section h1 {
+        font-size: 2rem;
       }
 
-      .btn-primary-custom {
-        background-color: #008060;
-        border-color: #008060;
-        color: #fff;
-        padding: 10px 45px;
-        border-radius: 28px;
-        font-weight: 600;
-        font-size: 16px;
+      .faq-section {
+        padding: 60px 0;
       }
 
-      .btn-primary-custom:hover {
-        background-color: #00664c;
-        border-color: #00664c;
+      .faq-section h2 {
+        font-size: 1.8rem;
       }
 
-      .btn-secondary-custom {
-        background-color: transparent;
-        border: 2px solid #000;
-        color: #000;
-        padding: 10px 25px;
-        border-radius: 50px;
-        font-weight: 600;
+      .accordion-button {
+        padding: 25px 0;
       }
 
-      .btn-secondary-custom:hover {
-        background-color: #000;
-        color: #fff;
+      .accordion-body {
+        padding-left: 45px;
+        padding-bottom: 20px;
       }
-      @media (max-width: 992px) {
-        .main-heading {
-          font-size: 40px;
-          line-height: 48px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Header Section -->
-    <header class="py-4">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <!-- Logo with two lines of text -->
-          <a class="navbar-brand me-4" href="#">
-            <img src="./image/logo/greenweblogo-green 1.png" />
-          </a>
 
-          <!-- Toggler button for small screens -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Navigation links and Login button -->
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav d-flex justify-content-center w-100">
-              <li class="nav-item">
-                <a
-                  class="nav-link fw-bold"
-                  style="color: #000000; margin-right: 1.5rem"
-                  href="#"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link fw-normal"
-                  style="color: #000000; margin-right: 1.5rem"
-                  href="#"
-                  >Services</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link fw-normal"
-                  style="color: #000000; margin-right: 1.5rem"
-                  href="#"
-                  >Blog</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link fw-normal"
-                  style="color: #000000; margin-right: 1.5rem"
-                  href="#"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-            <button class="btn login-btn mt-2 mt-lg-0">Login</button>
-          </div>
+      .faq-number {
+        margin-right: 20px;
+        min-width: 30px;
+      }
+
+      .footer-section {
+        padding: 40px 0 30px 0;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+
+      .footer-social {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .cta-section h1 {
+        font-size: 1.75rem;
+      }
+
+      .cta-section p {
+        font-size: 1rem;
+      }
+
+      .accordion-button {
+        padding: 20px 0;
+      }
+
+      .accordion-body {
+        padding-left: 35px;
+        padding-bottom: 15px;
+      }
+
+      .faq-number {
+        margin-right: 15px;
+        min-width: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="py-4">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Logo with two lines of text -->
+        <a class="navbar-brand me-4" href="#">
+          <img src="./image/logo/greenweblogo-green 1.png" />
+        </a>
+
+        <!-- Toggler button for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navigation links and Login button -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav d-flex justify-content-center w-100">
+            <li class="nav-item">
+              <a class="nav-link fw-bold" style="color: #000000; margin-right: 1.5rem" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-normal" style="color: #000000; margin-right: 1.5rem" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-normal" style="color: #000000; margin-right: 1.5rem" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-normal" style="color: #000000; margin-right: 1.5rem" href="#">Contact Us</a>
+            </li>
+          </ul>
+          <button class="btn login-btn mt-2 mt-lg-0">Login</button>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Main Content -->
-    <main class="container my-5">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <h1 class="main-heading">
-            Your SEO Swiss Army Knife, Right In The Browser.
-            <span style="color: red">&#x1F525;</span>
-          </h1>
-          <p class="mt-4 main-text">
-            One click reveals the SEO score, traffic, backlinks, and authority
-            of any website you visit. Perfect for link building, content
-            research and competitive analysis.
-          </p>
-          <div class="d-flex mt-4">
-            <button class="btn btn-primary-custom">Add to Chrome</button>
-            <div class="d-flex ms-3">
-              <img src="./image/logo/pause.png" />
-              <p
-                class="d-flex justify-content-center align-items-center m-0 ms-2 fw-bold"
-                style="color: #1c9876"
-              >
-                Watch Video
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div>
-            <img
-              src="./image/others/bgImageup.png"
-              class="img-fluid width-full"
-            />
+  <!-- Main Content -->
+  <main class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="main-heading">
+          Your SEO Swiss Army Knife, Right In The Browser.
+          <span style="color: red">&#x1F525;</span>
+        </h1>
+        <p class="mt-4 main-text">
+          One click reveals the SEO score, traffic, backlinks, and authority
+          of any website you visit. Perfect for link building, content
+          research and competitive analysis.
+        </p>
+        <div class="d-flex mt-4">
+          <button class="btn btn-primary-custom">Add to Chrome</button>
+          <div class="d-flex ms-3">
+            <img src="./image/logo/pause.png" />
+            <p class="d-flex justify-content-center align-items-center m-0 ms-2 fw-bold" style="color: #1c9876">
+              Watch Video
+            </p>
           </div>
         </div>
       </div>
-    </main>
+      <div class="col-lg-6">
+        <div>
+          <img src="./image/others/bgImageup.png" class="img-fluid width-full" />
+        </div>
+      </div>
+    </div>
+  </main>
 
-    <!-- Company Logos Section -->
-    <section class="container my-5 py-5">
-      <div class="row align-items-center justify-content-center">
-        <div
-          class="col-12 d-flex flex-wrap justify-content-center align-items-center"
-        >
-          <img
-            src="./image/slider/image 116.png"
-            alt="TechCrunch Logo"
-            class="img-fluid my-2 mx-3"
-          />
+  <!-- Company Logos Section -->
+  <section class="container my-5 py-5">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-12 d-flex flex-wrap justify-content-center align-items-center">
+        <img src="./image/slider/image 116.png" alt="TechCrunch Logo" class="img-fluid my-2 mx-3" />
 
-          <img
-            src="./image/slider/image 117.png"
-            alt="Search Engine Journal Logo"
-            class="img-fluid my-2 mx-3"
-          />
-          <img
-            src="./image/slider/image 118.png"
-            alt="ESG Xchange Logo"
-            class="img-fluid my-2 mx-3"
-          />
-          <img
-            src="./image/slider/logo_2025 JCI Logo + We Are Leaders (1) 1.png"
-            alt="JCI Hong Kong China Logo"
-            class="img-fluid my-2 mx-3"
-          />
-          <img
-            src="./image/slider/maxresdefault 1.png"
-            alt="Forbes Logo"
-            class="img-fluid my-2 mx-3"
-          />
+        <img src="./image/slider/image 117.png" alt="Search Engine Journal Logo" class="img-fluid my-2 mx-3" />
+        <img src="./image/slider/image 118.png" alt="ESG Xchange Logo" class="img-fluid my-2 mx-3" />
+        <img src="./image/slider/logo_2025 JCI Logo + We Are Leaders (1) 1.png" alt="JCI Hong Kong China Logo"
+          class="img-fluid my-2 mx-3" />
+        <img src="./image/slider/maxresdefault 1.png" alt="Forbes Logo" class="img-fluid my-2 mx-3" />
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class=" bg-white" style="padding-top: 35px;padding-bottom: 180px;">
+    <div class="container text-center position-relative">
+      <h2 class="main-heading mb-5">How It Works</h2>
+      <div class="">
+        <img src="./image/works/Line.png" />
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-4 d-flex flex-column align-items-center mb-4 mb-lg-0 position1">
+          <div class="d-flex flex-column align-items-center">
+            <div class=" text-center">
+              <h5 class="fw-bold step-card ">Step 1</h5>
+            </div>
+            <img src="./image/works/Mask1.png" alt="puzzle icon">
+            <p class="main-text text-center">Add The Extension From The <br> Chrome Web Store.</p>
+          </div>
+
+        </div>
+        <div class="col-lg-4 d-flex flex-column align-items-center mb-4 mb-lg-0 position2">
+          <div class="d-flex flex-column align-items-center">
+            <div class=" text-center">
+              <h5 class="fw-bold  step-card">Step 2</h5>
+            </div>
+            <img src="./image/works/Mask2.png" alt="puzzle icon">
+            <p class="main-text text-center">Navigate To Any Website You Want <br> To Analyze..</p>
+          </div>
+
+
+
+        </div>
+        <div class="col-lg-4 d-flex flex-column align-items-center position3">
+          <div class="d-flex flex-column align-items-center">
+            <div class=" text-center">
+              <h5 class="fw-bold  step-card">Step 3</h5>
+            </div>
+            <img src="./image/works/Mask3.png" alt="puzzle icon">
+            <p class="main-text text-center">Click The Extension Icon To See All <br> SEO Data Magically Overlay <br>
+              The
+              Page.</p>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Everything You Need To -->
+
+  <section class="container  text-center">
+    <h2 class="main-heading mb-5">
+      Everything You Need To<br> Know, At A Glance
+    </h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card text-start">
+          <div class="feature-icon mb-3">
+            <img src="./image/works/glance1.png" />
+          </div>
+          <h5 class="overall-heading">Overall SEO Health Score</h5>
+          <p class="main-text">
+            A quick, visual grade (0-100) of the page's overall SEO
+            effectiveness. Green is good, red is bad.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card text-start">
+          <div class="feature-icon mb-3">
+            <img src="./image/works/glance2.png" />
+            </svg>
+          </div>
+          <h5 class="overall-heading">Authority Metrics</h5>
+          <p class="main-text">
+            See both Domain Authority and Page Authority scores to gauge the
+            site's and page's link power and ranking potential.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card text-start">
+          <div class="feature-icon mb-3">
+            <img src="./image/works/glance3.png" />
+          </div>
+          <h5 class="overall-heading">Traffic Insights</h5>
+          <p class="main-text">
+            Get estimated monthly visit numbers and traffic sources to
+            understand their audience size and acquisition strategy.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card text-start">
+          <div class="feature-icon mb-3">
+            <img src="./image/works/glance4.png" />
+          </div>
+          <h5 class="overall-heading">Backlink Profile</h5>
+          <p class="main-text">
+            See the total number of referring domains and backlinks to assess
+            their link-building success.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card text-start">
+          <div class="feature-icon mb-3">
+            <img src="./image/works/glance5.png" />
+            </svg>
+          </div>
+          <h5 class="overall-heading">Performance Grades</h5>
+          <p class="main-text">
+            Critical Web Vitals and page speed scores for both desktop and
+            mobile. Essential for user experience and rankings.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="bg-white">
+    <div class="container">
+      <div class="position-relative">
+        <img src="./image/others/image.png" class="img-fluid" />
+
+        <div class=" position-absolute  top-50 start-50 translate-middle" style="z-index: 10;">
+          <img src="./image/others/pause2.png" class="img-fluid" />
+        </div>
+
+        <div class=" position-absolute  top-50 start-50 translate-middle">
+          <div class="bg-white " style="width: 30px; height: 30px;">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Testimonial Section -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h2>Loved By SEOs And Marketers</h2>
+
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- First slide with 2 testimonials -->
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="testimonial-card">
+                      <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                        </div>
+                        <div class="testimonial-text">
+                          I have been taking gym and fitness training here
+                          since a long time and I found here so much easy,
+                          comfort and flexibility. The mentors are so good and
+                          they train me very well.
+                          <div class="testimonial-quote">
+                            <img src="./image/works/Vector.png" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonial-author">
+                        <img src="./image/works/man.png" alt="Jhon Stokes" class="testimonial-avatar" />
+                        <div class="testimonial-info">
+                          <h4>Jhon Stokes</h4>
+                          <p>Founder</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="testimonial-card">
+                      <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                        </div>
+                        <div class="testimonial-text">
+                          I have been taking gym and fitness training here
+                          since a long time and I found here so much easy,
+                          comfort and flexibility. The mentors are so good and
+                          they train me very well.
+                          <div class="testimonial-quote">
+                            <img src="./image/works/Vector.png" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonial-author">
+                        <img src="./image/works/women.png" alt="Jane Doe" class="testimonial-avatar" />
+                        <div class="testimonial-info">
+                          <h4>Jane Doe</h4>
+                          <p>Head of SEO at ABC Agency.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Second slide with 2 more testimonials -->
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="testimonial-card">
+                      <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                        </div>
+                        <div class="testimonial-text">
+                          I have been taking gym and fitness training here
+                          since a long time and I found here so much easy,
+                          comfort and flexibility. The mentors are so good and
+                          they train me very well.
+                          <div class="testimonial-quote">
+                            <img src="./image/works/Vector.png" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonial-author">
+                        <img src="./image/works/man.png" alt="Mike Johnson" class="testimonial-avatar" />
+                        <div class="testimonial-info">
+                          <h4>Mike Johnson</h4>
+                          <p>Digital Marketing Manager</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="testimonial-card">
+                      <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                        </div>
+                        <div class="testimonial-text">
+                          I have been taking gym and fitness training here
+                          since a long time and I found here so much easy,
+                          comfort and flexibility. The mentors are so good and
+                          they train me very well.
+                          <div class="testimonial-quote">
+                            <img src="./image/works/Vector.png" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonial-author">
+                        <img src="./image/works/women.png" alt="Sarah Wilson" class="testimonial-avatar" />
+                        <div class="testimonial-info">
+                          <h4>Sarah Wilson</h4>
+                          <p>SEO Consultant</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Third slide with 2 more testimonials -->
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="testimonial-card">
+                      <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                        </div>
+                        <div class="testimonial-text">
+                          I have been taking gym and fitness training here
+                          since a long time and I found here so much easy,
+                          comfort and flexibility. The mentors are so good and
+                          they train me very well.
+                          <div class="testimonial-quote">
+                            <img src="./image/works/Vector.png" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonial-author">
+                        <img src="./image/works/man.png" alt="David Chen" class="testimonial-avatar" />
+                        <div class="testimonial-info">
+                          <h4>David Chen</h4>
+                          <p>Agency Owner</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="testimonial-card">
+                      <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#1C9876" stroke-width="2">
+                            <polygon
+                              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                          </svg>
+                        </div>
+                        <div class="testimonial-text">
+                          I have been taking gym and fitness training here
+                          since a long time and I found here so much easy,
+                          comfort and flexibility. The mentors are so good and
+                          they train me very well.
+                          <div class="testimonial-quote">
+                            <img src="./image/works/Vector.png" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonial-author">
+                        <img src="./image/works/women.png" alt="Emma Rodriguez" class="testimonial-avatar" />
+                        <div class="testimonial-info">
+                          <h4>Emma Rodriguez</h4>
+                          <p>Content Marketing Lead</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel indicators -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Testimonial Section -->
+  <section class="testimonial-section">
+    <div class="">
+
+      <!-- Third slide with 2 more testimonials -->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-stars">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                </div>
+                <div class="testimonial-text">
+                  I have been taking gym and fitness training here
+                  since a long time and I found here so much easy,
+                  comfort and flexibility. The mentors are so good and
+                  they train me very well.
+                  <div class="testimonial-quote">
+                    <img src="./image/works/Vector.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-author">
+                <img src="/placeholder.svg?height=50&width=50" alt="David Chen" class="testimonial-avatar" />
+                <div class="testimonial-info">
+                  <h4>David Chen</h4>
+                  <p>Agency Owner</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12 mb-4">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-stars">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                </div>
+                <div class="testimonial-text">
+                  I have been taking gym and fitness training here
+                  since a long time and I found here so much easy,
+                  comfort and flexibility. The mentors are so good and
+                  they train me very well.
+                  <div class="testimonial-quote">
+                    <img src="./image/works/Vector.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-author">
+                <img src="/placeholder.svg?height=50&width=50" alt="Emma Rodriguez" class="testimonial-avatar" />
+                <div class="testimonial-info">
+                  <h4>Emma Rodriguez</h4>
+                  <p>Content Marketing Lead</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="cta-section">
+      <div class="">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10 text-center">
+            <h1>Start Your SEO Exploration Now</h1>
+            <p>
+              Join 1X,000 professionals who use SEO Insight daily. It's free to
+              install.
+            </p>
+            <a href="#" class="cta-btn">Add to Chrome - It's Free</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
+
+
+    <section class="faq-section">
       <div class="container">
-        <p class="mb-0">&copy; 2024 My Project. All rights reserved.</p>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+            <div class="faq-heading">
+              <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <span class="faq-number">01</span>
+                    Is This Extension Free?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Yes! The core version with key metrics is free. We offer a
+                    Pro plan with more in-depth data and historical trends.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <span class="faq-number">02</span>
+                    Which Browsers Do You Support?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    We currently support Chrome, Firefox, Safari, and Edge
+                    browsers with full functionality.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <span class="faq-number">03</span>
+                    How Accurate Is The Data?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Our data is sourced from multiple reliable SEO databases and
+                    is updated regularly to ensure accuracy.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <span class="faq-number">04</span>
+                    What Are My Homeownership Program Obligations?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    This appears to be a different program question. Please
+                    contact support for homeownership program details.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <span class="faq-number">05</span>
+                    How Long Does The Homeownership Program Process Take?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    The typical homeownership program process takes 30-45 days
+                    from application to completion.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="footer-logo">
+              <img src="./image/logo/footer_logo.png" />
+            </div>
+            <p class="footer-description">
+              Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisl ut aliquip ex.
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4"></div>
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <div class="footer-column">
+              <h5>Solutions</h5>
+              <ul>
+                <li><a href="#">Web Tool</a></li>
+                <li><a href="#">Consulting</a></li>
+                <li><a href="#">Research</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <div class="footer-column">
+              <h5>Company</h5>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Methodology</a></li>
+                <li><a href="#">Partners</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <div class="footer-column">
+              <h5>Community</h5>
+              <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Open-Source Data</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            Copyright © 2025 everythinggreen. All Rights Reserved
+          </div>
+          <div class="footer-social">
+            <a href="#" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Medium">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Bookmark">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
 
-    <!-- Bootstrap JS with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
 
-    <!-- Custom JavaScript -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const myButton = document.getElementById("my-button");
-        if (myButton) {
-          myButton.addEventListener("click", () => {
-            alert("Button was clicked!");
-          });
-        }
-      });
-    </script>
-  </body>
+    <!-- Bootstrap JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
+
+</body>
+
 </html>
